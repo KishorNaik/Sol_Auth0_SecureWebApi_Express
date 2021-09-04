@@ -1,0 +1,49 @@
+Step 1:
+npm init -y
+
+Step 2:
+Download following package
+
+npm install --save-dev express dotenv cors helmet
+
+npm install --save-dev typescript
+
+npm install --save-dev @types/node @types/express @types/dotenv @types/cors @types/helmet
+
+npm install --save-dev ts-node-dev
+
+--Auth0 Package
+npm install --save-dev express-jwt jwks-rsa
+npm install --save-dev @types/express-jwt
+npm install --save-dev request @types/request
+
+
+Step 3:
+Initialize TypeScript in Node.js,it will create tsconfig.json file
+npx tsc --init
+
+Step 4:
+Create a Program.ts file
+
+Step 5:
+Go to package.json file and add following scripts
+
+"start": "ts-node-dev --respawn --pretty --transpile-only ./src/Program.ts",
+"debug": "ts-node-dev --inspect=4321 --pretty --transpile-only ./src/Program.ts"
+
+Step 6:
+Create an environment file. 
+
+Step 7:
+Configure Auth0.
+https://auth0.com/blog/node-js-and-typescript-tutorial-secure-an-express-api/
+https://auth0.com/docs/quickstart/backend/nodejs
+
+Step 8:
+Create JwtMiddlewares folder. create a file to define your authorization middleware function. JwtMiddleware.ts [Check Source Code]
+
+Step 9:
+Create a Utility folder, create TokenGenerate function for generate token from Auth0 server. TokenGenerate.ts [Check Source Code]
+
+
+
